@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(['namespace' => 'App\Http\Controllers'], function()
-{   
+{
     /**
      * Home Routes
      */
@@ -32,5 +32,5 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
     });
     /* Language */
-    Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
+    Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
 });

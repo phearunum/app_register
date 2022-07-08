@@ -1,1 +1,15 @@
 
+@font-face {
+    font-family:khmerFontMoul;
+    src: url('/../fonts/khmerMoul.ttf');
+}
+.app_font_titel{
+    font-family: khmerFontMoul!important;
+}
+.app_them_1{
+    background-color:#3f6eb4 ;
+    color:white;
+}
+h1,h2,h3,h4,h5{
+    font-family: khmerFontMoul!important;
+}
