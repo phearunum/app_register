@@ -6,12 +6,16 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.87.0">
-    <title>App</title>
+    <title>Apps</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{!! url('assets/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet">
     <link href="{!! url('assets/css/signin.css') !!}" rel="stylesheet">
     <link href="{!! url('/css/app.css') !!}" rel="stylesheet">
+    <link href="/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+	<link rel="stylesheet" href="/vendor/nouislider/nouislider.min.css">
+	<!-- Style css -->
+    <link href="/css/style.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -31,9 +35,9 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+
 </head>
-<body class="text-center">
+<body class="text-left">
 
     <main class="form-signin">
 

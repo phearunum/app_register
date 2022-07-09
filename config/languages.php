@@ -2,11 +2,11 @@
 return [
     'en' => [
         'display' => 'English',
-        'flag-icon' => 'us'
+        'icon' => 'united-states.png'
     ],
     'kh' => [
         'display' => 'Khmer',
-        'flag-icon' => 'kh'
+        'icon' => 'cambodia.png'
     ],
 
 

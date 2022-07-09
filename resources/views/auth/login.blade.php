@@ -2,9 +2,19 @@
 
 @section('content')
 <form method="post" action="{{ route('login.perform') }}" style="margin-top:-300px;">
+    <div class="text-left">
+    @foreach (Config::get('languages') as $lang => $language)
+            @if ($lang != App::getLocale())
+                    <a  href="{{ route('lang.switch', $lang) }}"> <img class="mb-4" src="/images/{{$language['icon']}}" alt=""> </a>
+            @endif
+     @endforeach
 
+     <br/>
+    </div>
     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+    <center>
     <img class="mb-4" src="{!! url('images/bootstrap-logo.svg') !!}" alt="" width="72" height="57">
+    </center>
 
     <h1 class="h3 mb-3 fw-normal app_font_titel">{{__('lang.login your account')}}</h1>
 
@@ -26,7 +36,7 @@
         @endif
     </div>
 
-    <button class="w-100 btn btn-lg app_them_1 app_font_titel" type="submit">  {{__('lang.login')}} </button>
+    <button class="w-100 btn btn-lg btn-primary app_font_titel" type="submit">  {{__('lang.login')}} </button>
 
    <!-- @include('auth.partials.copy')-->
 </form>
