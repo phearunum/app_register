@@ -1,1 +1,16 @@
+<<<<<<< HEAD
 
+=======
+@font-face {
+    font-family:khmerFontMoul;
+    src: url('/../fonts/khmerMoul.ttf');
+}
+.app_font_titel{
+    font-family: khmerFontMoul!important;
+}
+
+.app_them1{
+    background:blue;
+    color:white
+}
+>>>>>>> 9273082822040b9d0e8e3e3b60b734c1d7162ecf
