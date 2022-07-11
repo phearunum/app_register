@@ -3,16 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-
-class HomeController extends Controller
-{
-    public function index() 
-    {
-        return view('home.index');
-    }
-}
-=======
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -21,9 +11,21 @@ class HomeController extends Controller
     {
 
         if (Auth::check()) {
-            return view('home.index');
+            return view('website.page.index');
         }
-        return view('auth.login');
+        return view('website.page.login');
+    }
+     public function profile()
+    {
+        if (Auth::check()) {
+            return view('website.page.profile');
+        }
+      //  return redirect('/');
+        return view('website.page.login');
+    }
+     public function signup()
+    {
+      
+        return view('website.page.signup');
     }
 }
->>>>>>> 9273082822040b9d0e8e3e3b60b734c1d7162ecf

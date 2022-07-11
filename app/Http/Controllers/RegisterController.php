@@ -4,50 +4,30 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use DB;
 use App\Http\Requests\RegisterRequest;
-<<<<<<< HEAD
-=======
 use Hash;
 use Session;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash as FacadesHash;
->>>>>>> 9273082822040b9d0e8e3e3b60b734c1d7162ecf
+use Illuminate\Contracts\Validation\Factory as ValidationFactory;
 
 class RegisterController extends Controller
 {
     /**
      * Display register page.
-<<<<<<< HEAD
-     * 
-=======
      *
->>>>>>> 9273082822040b9d0e8e3e3b60b734c1d7162ecf
      * @return \Illuminate\Http\Response
      */
     public function show()
     {
-        return view('auth.register');
+        $AccountType =DB::table('account_types')->get();
+        return view('auth.register')->with('AccountType',$AccountType);
     }
 
     /**
      * Handle account registration request
-<<<<<<< HEAD
-     * 
-     * @param RegisterRequest $request
-     * 
-     * @return \Illuminate\Http\Response
-     */
-    public function register(RegisterRequest $request) 
-    {
-        $user = User::create($request->validated());
-
-        auth()->login($user);
-
-        return redirect('/')->with('success', "Account successfully registered.");
-    }
-}
-=======
      *
      * @param RegisterRequest $request
      *
@@ -55,12 +35,39 @@ class RegisterController extends Controller
      */
     public function register(RegisterRequest $request)
     {
+      
         $user = User::create($request->validated());
         auth()->login($user);
         return redirect('/')->with('success', "Account successfully registered.");
     }
-
+    public function registers(Request $request)
+    {
+       
+        $request->validate([
+            'email' => 'required|email:rfc,dns|unique:users,email',
+            'username' => 'required|unique:users,username',
+            'password' => 'required|min:4',
+            'password_confirmation' => 'required|same:password',
+            'account_type'=>'required|numeric',
+            'phone'=>'required|string|max:255',
+            'first_name'=>'required|string|max:255',
+            'last_name'=>'required|string|max:255',
+        ]);
+       
+ 
+            DB::beginTransaction();
+        try{
+            $user = User::create($request);
+            DB::commit();
+            auth()->login($user);
+        }catch(\Exception $e){
+            DB::rollback();
+            return redirect()->with('error', "Account register error ");    
+        }
+            
+        
+    }
+   
 
 
 }
->>>>>>> 9273082822040b9d0e8e3e3b60b734c1d7162ecf

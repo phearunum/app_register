@@ -26,16 +26,19 @@ class RegisterRequest extends FormRequest
         return [
             'email' => 'required|email:rfc,dns|unique:users,email',
             'username' => 'required|unique:users,username',
-<<<<<<< HEAD
-            'password' => 'required|min:8',
-            'password_confirmation' => 'required|same:password'
-        ];
-    }
-}
-=======
             'password' => 'required|min:4',
-            'password_confirmation' => 'required|same:password'
+            'password_confirmation' => 'required|same:password',
+            'account_type'=>'required',
+            'first_name'=>'required',
+            'last_name'=>'required',
+            'phone'=>'required',
+            'province'=>'required',
+             'address'=>'required',
+             'status'=>'required',
+
+            
+
+           
         ];
     }
 }
->>>>>>> 9273082822040b9d0e8e3e3b60b734c1d7162ecf

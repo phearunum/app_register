@@ -4,15 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-<<<<<<< HEAD
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.87.0">
-    <title>Home</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{!! url('assets/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet">
-
-=======
     <meta name="author" content="Phearun">
     <meta name="generator" content="Hugo 0.87.0">
     <title>Dashboard</title>
@@ -25,7 +16,6 @@
 	<link rel="stylesheet" href="/vendor/nouislider/nouislider.min.css">
 	<!-- Style css -->
     <link href="/css/style.css" rel="stylesheet">
->>>>>>> 9273082822040b9d0e8e3e3b60b734c1d7162ecf
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -42,24 +32,6 @@
       }
     </style>
 
-<<<<<<< HEAD
-    
-    <!-- Custom styles for this template -->
-    <link href="{!! url('assets/css/app.css') !!}" rel="stylesheet">
-</head>
-<body>
-    
-    @include('layouts.partials.navbar')
-
-    <main class="container">
-        @yield('content')
-    </main>
-
-    <script src="{!! url('assets/bootstrap/js/bootstrap.bundle.min.js') !!}"></script>
-      
-  </body>
-</html>
-=======
 
     <!-- Custom styles for this template
     <link href="{!! url('assets/css/app.css') !!}" rel="stylesheet">
@@ -113,4 +85,3 @@
     <script src="{!! url('assets/bootstrap/js/bootstrap.bundle.min.js') !!}"></script>
   </body>
 </html>
->>>>>>> 9273082822040b9d0e8e3e3b60b734c1d7162ecf

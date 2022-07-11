@@ -4,28 +4,26 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(['namespace' => 'App\Http\Controllers'], function()
-<<<<<<< HEAD
-{   
-=======
 {
->>>>>>> 9273082822040b9d0e8e3e3b60b734c1d7162ecf
     /**
-     * Home Routes
+     * Home Routes Website 
      */
-    Route::get('/', 'HomeController@index')->name('home.index');
-
+    Route::get('/', 'HomeController@index')->name('website.page.index');
+    
     Route::group(['middleware' => ['guest']], function() {
         /**
          * Register Routes
          */
-        Route::get('/register', 'RegisterController@show')->name('register.show');
-        Route::post('/register', 'RegisterController@register')->name('register.perform');
+        Route::get('/dashboard/register', 'RegisterController@show')->name('register.show');
+        Route::post('/dashboard/register', 'RegisterController@register')->name('register.perform');
 
         /**
          * Login Routes
          */
-        Route::get('/login', 'LoginController@show')->name('login.show');
-        Route::post('/login', 'LoginController@login')->name('login.perform');
+        Route::get('/dashboard/login', 'LoginController@show')->name('login.show');
+        Route::post('/dashboard/login', 'LoginController@login')->name('login.perform');
+
+        Route::get('/signup', 'HomeController@signup')->name('signup.sigup');
 
     });
 
@@ -34,12 +32,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          * Logout Routes
          */
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
+        Route::get('/profile', 'HomeController@profile')->name('profile.profile');
+       
+        
     });
     /* Language */
-<<<<<<< HEAD
-    Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
-});
-=======
     Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
 });
->>>>>>> 9273082822040b9d0e8e3e3b60b734c1d7162ecf

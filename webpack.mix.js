@@ -12,10 +12,6 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-<<<<<<< HEAD
-    .postCss('resources/css/app.css', 'public/css', [
-=======
     .postCss('resources/css/app.css', 'public/css','resources/sass/app.scss', [
->>>>>>> 9273082822040b9d0e8e3e3b60b734c1d7162ecf
         //
     ]);
