@@ -36,9 +36,10 @@ class RegisterRequest extends FormRequest
              'address'=>'required',
              'status'=>'required',
 
-            
 
-           
+
+
         ];
     }
 }
+

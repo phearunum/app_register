@@ -6,10 +6,10 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'App\Http\Controllers'], function()
 {
     /**
-     * Home Routes Website 
+     * Home Routes Website
      */
     Route::get('/', 'HomeController@index')->name('website.page.index');
-    
+
     Route::group(['middleware' => ['guest']], function() {
         /**
          * Register Routes
@@ -33,8 +33,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          */
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
         Route::get('/profile', 'HomeController@profile')->name('profile.profile');
-       
-        
+
+
     });
     /* Language */
     Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);

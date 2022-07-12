@@ -4,4 +4,8 @@
 }
 .app_font_titel{
     font-family: khmerFontMoul!important;
+    line-height: 1rem;
+}
+img {
+     filter: saturate(1)!important;
 }

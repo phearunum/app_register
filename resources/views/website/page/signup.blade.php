@@ -9,12 +9,42 @@
     <meta name="keyword"
         content="AVIO, Bootstrap 5, ReactJs, Angular, Laravel, VueJs, ASP .Net, Admin Dashboard, Admin Theme, HRMS, Projects, Hospital Admin, CRM Admin, Events, Fitness, Music, Inventory, Job Portal">
     <link rel="icon" href="/website/img/favicon.ico" type="image/x-icon">
-    <title>:: E-Filing :: Sign Up</title>
+    <title>Sign Up</title>
 
 
     <link rel="stylesheet" href="/website/css/avio-style.css">
 
     <script src="/website/js/plugins.js"></script>
+    <link href="{!! url('/css/app.css') !!}" rel="stylesheet">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="https://www.jqueryscript.net/demo/floating-labels-bootstrap/bootstrap.css" rel="stylesheet"
+        type="text/css">
+
+    <style>
+        img {
+            filter: saturate(1) !important;
+        }
+
+        .centered {
+            position: fixed;
+            top: 50%;
+            left: 53%;
+            margin-top: -100px;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .form-control-lg {
+            font-size: 1.2px;
+            padding: 20px 10px !important;
+        }
+
+        .form-control.form-control-lg,
+        .form-select.form-control-lg {
+            min-height: calc(1.2em + 1.5rem + 2px);
+            font-size: 1.2rem;
+        }
+    </style>
 </head>
 
 <body data-avio="theme-indigo">
@@ -23,102 +53,156 @@
 
         <div class="page-body">
             <div class="container-fluid">
-                <div class="row g-0 mt-lg-4">
-                    <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
-                        <div style="max-width: 25rem;">
-                            <div class="mb-4">
-                                <svg width="48" height="36" viewBox="0 0 48 36" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect class="fill-secondary" x="1.5" y="4.5" width="27"
-                                        height="27" rx="13.5" />
-                                    <rect class="fill-primary" x="13.5" y="1.5" width="33"
-                                        height="33" rx="16.5" stroke="white" stroke-width="3" />
-                                </svg>
-                            </div>
-                            <div class="mb-5">
-                                <h2 class="color-900">Build digital products with:</h2>
-                            </div>
+                <div class="container " style="min-height: 150px;">
+                    <h3 class="app_font_titel pt-4 text-white "> {{ __('lang.efiling') }} </h3>
+                </div>
+                <div class="container p-0" style="margin-top: -40px;">
 
-                            <ul class="list-unstyled mb-5">
-                                <li class="mb-4">
-                                    <span class="d-block mb-1 fs-4 fw-light">All-in-one tool</span>
-                                    <span class="color-600">Amazing Features to make your life easier & work
-                                        efficient</span>
-                                </li>
-                                <li>
-                                    <span class="d-block mb-1 fs-4 fw-light">Easily add &amp; manage your
-                                        services</span>
-                                    <span class="color-600">It brings together your tasks, projects, timelines, files
-                                        and more</span>
-                                </li>
-                            </ul>
-                            <div class="mb-2">
-                                <a href="#" class="me-3 color-600">Home</a>
-                                <a href="#" class="me-3 color-600">About Us</a>
-                                <a href="#" class="me-3 color-600">FAQs</a>
-                            </div>
-                            <div>
-                                <a href="#" class="me-3 color-400"><i class="fa fa-facebook-square fa-lg"></i></a>
-                                <a href="#" class="me-3 color-400"><i class="fa fa-github-square fa-lg"></i></a>
-                                <a href="#" class="me-3 color-400"><i class="fa fa-linkedin-square fa-lg"></i></a>
-                                <a href="#" class="me-3 color-400"><i class="fa fa-twitter-square fa-lg"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 d-flex justify-content-center align-items-center">
-                        <div class="card shadow p-4 p-md-5" style="max-width: 32rem;">
+                    <div class="card p-2">
+                        <h1 class="h3 mb-3 app_font_titel">{{ __('lang.sigup account') }}</h1>
+                        <form class="p-4" method="post" action="{{ route('register.perform') }}">
+                            <div class="row p-0">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
-                            <form class="row g-3">
-                                <div class="col-12 text-center mb-5">
-                                    <h1>Create account</h1>
-                                    <span>Free access to our dashboard.</span>
-                                </div>
-                                <div class="col-6">
-                                    <label class="form-label">Full name</label>
-                                    <input type="text" class="form-control form-control-lg" placeholder="John">
-                                </div>
-                                <div class="col-6">
-                                    <label class="form-label">&nbsp;</label>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Parker">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Email address</label>
-                                    <input type="email" class="form-control form-control-lg"
-                                        placeholder="name@example.com">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Password</label>
-                                    <input type="password" class="form-control form-control-lg"
-                                        placeholder="8+ characters required">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Confirm password</label>
-                                    <input type="password" class="form-control form-control-lg"
-                                        placeholder="8+ characters required">
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> I accept the <a
-                                                href="#" title="" class="text-primary">Terms and
-                                                Conditions</a>
-                                        </label>
+
+                                <div class="col-sm-6 col-xs-12 p-1">
+                                    <div class="form-group form-group-lg floating-label">
+                                        <input type="text" class="form-control form-control-lg" name="first_name"
+                                            value="{{ old('first_name') }}" placeholder="{{ __('lang.first_name') }}"
+                                            required="required" autofocus>
+                                        <label for="floatingFirstName">{{ __('lang.first_name') }}</label>
+                                        @if ($errors->has('first_name'))
+                                            <span
+                                                class="text-danger text-left">{{ $errors->first('first_name') }}</span>
+                                        @endif
                                     </div>
                                 </div>
-                                <div class="col-12 text-center mt-4">
-                                    <button type="submit"
-                                        class="btn btn-lg btn-block btn-dark lift text-uppercase">SIGN UP</button>
+                                <div class="col-sm-6 col-xs-12 p-1">
+                                    <div class="form-group form-group-lg floating-label">
+                                        <input type="text" class="form-control form-control-lg " name="last_name"
+                                            value="{{ old('last_name') }}" placeholder="{{ __('lang.last_name') }}"
+                                            required="required" autofocus>
+                                        <label for="floatingLastName">{{ __('lang.last_name') }}</label>
+                                        @if ($errors->has('last_name'))
+                                            <span
+                                                class="text-danger text-left">{{ $errors->first('last_name') }}</span>
+                                        @endif
+                                    </div>
                                 </div>
-                                <div class="col-12 text-center mt-4">
-                                    <span class="text-muted">Already have an account? <a href="auth-signin.html">Sign
-                                            in here</a></span>
+                                <div class="col-sm-6 col-xs-12 p-1">
+                                    <div class="form-group floating-label">
+                                        <input type="email" class="form-control" name="email"
+                                            value="{{ old('email') }}" placeholder="name@example.com"
+                                            required="required" autofocus>
+                                        <label for="floatingEmail">Email address</label>
+                                        @if ($errors->has('email'))
+                                            <span class="text-danger text-left">{{ $errors->first('email') }}</span>
+                                        @endif
+                                    </div>
                                 </div>
-                            </form>
+                                <div class="col-sm-6 col-xs-12 p-1">
+                                    <div class="form-group floating-label">
+                                        <input type="text" class="form-control" name="phone"
+                                            value="{{ old('phone') }}" placeholder="Phone" required="required"
+                                            autofocus>
+                                        <label for="floatingPhone">Phone</label>
+                                        @if ($errors->has('phone'))
+                                            <span class="text-danger text-left">{{ $errors->first('phone') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12 p-1">
+                                    <div class="form-group floating-label">
+                                        <input type="text" class="form-control" name="province"
+                                            value="{{ old('province') }}" placeholder="Province" required="required"
+                                            autofocus>
+                                        <label for="floatingProvince">Province</label>
+                                        @if ($errors->has('province'))
+                                            <span
+                                                class="text-danger text-left">{{ $errors->first('province') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12 p-1">
+                                    <div class="form-group floating-label">
+                                        <input type="text" class="form-control" name="address"
+                                            value="{{ old('address') }}" placeholder="Address" required="required"
+                                            autofocus>
+                                        <label for="floatingProvince">Address</label>
+                                        @if ($errors->has('address'))
+                                            <span
+                                                class="text-danger text-left">{{ $errors->first('address') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <input type="hidden" class="form-control" name="status" value="1">
 
-                        </div>
+                                <div class="col-sm-6 col-xs-12 p-1">
+                                    <div class="form-group floating-label">
+                                        <input type="text" class="form-control" name="username"
+                                            value="{{ old('username') }}" placeholder="Username"
+                                            required="required" autofocus>
+                                        <label for="floatingName">Username</label>
+                                        @if ($errors->has('username'))
+                                            <span
+                                                class="text-danger text-left">{{ $errors->first('username') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12 p-1">
+                                    <div class="form-group floating-label">
+
+                                        <select class="form-control" id="account_type" placeholder="Account Type"
+                                            name="account_type" @error('account_type') is-invalid @enderror>
+                                            <option selected disabled>-- Select --</option>
+                                            @foreach ($AccountType as $items)
+                                                <option value="{{ $items->id }}"
+                                                    data-trainer_id={{ $items->id }}>{{ $items->name }}</option>
+                                            @endforeach
+                                        </select>
+                                        @if ($errors->has('account_type'))
+                                            <span
+                                                class="text-danger text-left">{{ $errors->first('account_type') }}</span>
+                                        @endif
+
+                                    </div>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <div class="form-group floating-label">
+                                        <input type="password" class="form-control" name="password"
+                                            value="{{ old('password') }}" placeholder="Password"
+                                            required="required">
+                                        <label for="floatingPassword">Password</label>
+                                        @if ($errors->has('password'))
+                                            <span
+                                                class="text-danger text-left">{{ $errors->first('password') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-6 p-1">
+
+                                    <div class="form-group floating-label">
+                                        <input type="password" class="form-control" name="password_confirmation"
+                                            value="{{ old('password_confirmation') }}"
+                                            placeholder="Confirm Password" required="required">
+                                        <label for="floatingConfirmPassword">Confirm Password</label>
+                                        @if ($errors->has('password_confirmation'))
+                                            <span
+                                                class="text-danger text-left">{{ $errors->first('password_confirmation') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <button class="w-100 btn btn-primary col-6 " type="submit">Register</button>
+                                <button class="w-100 btn btn-danger col-6 " type="button">Cancel</button>
+
+                            </div>
+                        </form>
+
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>

@@ -23,6 +23,7 @@ class RegisterController extends Controller
     public function show()
     {
         $AccountType =DB::table('account_types')->get();
+
         return view('auth.register')->with('AccountType',$AccountType);
     }
 
@@ -35,14 +36,14 @@ class RegisterController extends Controller
      */
     public function register(RegisterRequest $request)
     {
-      
+
         $user = User::create($request->validated());
         auth()->login($user);
         return redirect('/')->with('success', "Account successfully registered.");
     }
     public function registers(Request $request)
     {
-       
+
         $request->validate([
             'email' => 'required|email:rfc,dns|unique:users,email',
             'username' => 'required|unique:users,username',
@@ -53,8 +54,8 @@ class RegisterController extends Controller
             'first_name'=>'required|string|max:255',
             'last_name'=>'required|string|max:255',
         ]);
-       
- 
+
+
             DB::beginTransaction();
         try{
             $user = User::create($request);
@@ -62,12 +63,13 @@ class RegisterController extends Controller
             auth()->login($user);
         }catch(\Exception $e){
             DB::rollback();
-            return redirect()->with('error', "Account register error ");    
+            return redirect()->with('error', "Account register error ");
         }
-            
-        
+
+
     }
-   
+
 
 
 }
+

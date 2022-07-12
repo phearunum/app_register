@@ -3,14 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Traits\HasRolesAndPermissions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Hash;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable,HasRolesAndPermissions;
 
     /**
      * The attributes that are mass assignable.
@@ -18,18 +20,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'frist_name',
-        'last_name',
+        'name',
+        'email',
         'username',
         'password',
-        'account_type',
-        'phone',
-        'email',
-        'province',
-        'address',
-        'status'
-
-
     ];
 
     /**
@@ -49,11 +43,14 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'create_at'=> 'datetime',
     ];
 
     public function setPasswordAttribute($value)
     {
     $this->attributes['password'] = bcrypt($value);
+    }
+    public function role()
+    {
+        return $this->belongsToMany(Role::class, 'role_user');
     }
 }

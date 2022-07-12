@@ -7,7 +7,7 @@ use App\Modle\AccountType;
 
 class AccountTypes extends Controller
 {
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -85,3 +85,4 @@ class AccountTypes extends Controller
         //
     }
 }
+

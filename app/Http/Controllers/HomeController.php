@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use DB;
 class HomeController extends Controller
 {
     public function index()
@@ -25,7 +25,8 @@ class HomeController extends Controller
     }
      public function signup()
     {
-      
-        return view('website.page.signup');
+        $AccountType =DB::table('account_types')->get();
+        return view('website.page.signup')->with('AccountType',$AccountType);
     }
+
 }
