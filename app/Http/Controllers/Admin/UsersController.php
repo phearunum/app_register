@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Gate;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreUsersRequest;
 use App\Http\Requests\Admin\UpdateUsersRequest;
-
+use DataTables;
+use DB;
 class UsersController extends Controller
 {
     /**
@@ -35,12 +36,8 @@ class UsersController extends Controller
      */
     public function create()
     {
-        if (! Gate::allows('users_manage')) {
-            return abort(401);
-        }
-        $roles = Role::get()->pluck('name', 'name');
-
-        return view('admin.users.create', compact('roles'));
+        $AccountType =DB::table('account_types')->get();
+        return view('dashboard.page.users.create_user')->with('AccountType',$AccountType);;
     }
 
     /**
@@ -60,7 +57,27 @@ class UsersController extends Controller
 
         return redirect()->route('admin.users.index');
     }
+   public function lists()
+   {
 
+    return view('dashboard.page.users.list_users');
+   }
+
+  public function getList(Request $request)
+  {
+    if ($request->ajax()) {
+        $data = User::latest()->get();
+        return Datatables::of($data)
+            ->addIndexColumn()
+            ->addColumn('action', function($row){
+                $actionBtn = '<a href="javascript:void(0)" class="edit btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete btn btn-danger btn-sm">Delete</a>';
+                return $actionBtn;
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+    }
+
+  }
 
     /**
      * Show the form for editing User.

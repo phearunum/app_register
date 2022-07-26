@@ -1,102 +1,229 @@
-<!--**********************************
-            Header start
-        ***********************************-->
-<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.svg" class="mr-2" alt="logo" /></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo" /></a>
-    </div>
-    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-            <span class="icon-menu"></span>
-        </button>
-        <ul class="navbar-nav mr-lg-2">
-            <li class="nav-item nav-search d-none d-lg-block">
-                <div class="input-group">
-                    <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
-                        <span class="input-group-text" id="search">
-                            <i class="icon-search"></i>
-                        </span>
+<header>
+    <div class="topbar d-flex align-items-center">
+        <nav class="navbar navbar-expand">
+            <div class="mobile-toggle-menu"><i class="bx bx-menu"></i>
+            </div>
+            <div class="search-bar flex-grow-1">
+                <div class="position-relative search-bar-box">
+                    <input type="text" class="form-control search-control" placeholder="Type to search..."> <span class="position-absolute top-50 search-show translate-middle-y"><i class="bx bx-search"></i></span>
+                    <span class="position-absolute top-50 search-close translate-middle-y"><i class="bx bx-x"></i></span>
+                </div>
+            </div>
+            <div class="top-menu ms-auto">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item mobile-search-icon">
+                        <a class="nav-link" href="#">	<i class="bx bx-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown dropdown-large">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">	<i class="bx bx-category"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <div class="row row-cols-3 g-3 p-3">
+                                <div class="col text-center">
+                                    <div class="app-box mx-auto bg-gradient-cosmic text-white"><i class="bx bx-group"></i>
+                                    </div>
+                                    <div class="app-title">Teams</div>
+                                </div>
+                                <div class="col text-center">
+                                    <div class="app-box mx-auto bg-gradient-burning text-white"><i class="bx bx-atom"></i>
+                                    </div>
+                                    <div class="app-title">Projects</div>
+                                </div>
+                                <div class="col text-center">
+                                    <div class="app-box mx-auto bg-gradient-lush text-white"><i class="bx bx-shield"></i>
+                                    </div>
+                                    <div class="app-title">Tasks</div>
+                                </div>
+                                <div class="col text-center">
+                                    <div class="app-box mx-auto bg-gradient-kyoto text-dark"><i class="bx bx-notification"></i>
+                                    </div>
+                                    <div class="app-title">Feeds</div>
+                                </div>
+                                <div class="col text-center">
+                                    <div class="app-box mx-auto bg-gradient-blues text-dark"><i class="bx bx-file"></i>
+                                    </div>
+                                    <div class="app-title">Files</div>
+                                </div>
+                                <div class="col text-center">
+                                    <div class="app-box mx-auto bg-gradient-moonlit text-white"><i class="bx bx-filter-alt"></i>
+                                    </div>
+                                    <div class="app-title">Alerts</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown dropdown-large">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">7</span>
+                            <i class="bx bx-bell"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="javascript:;">
+                                <div class="msg-header">
+                                    <p class="msg-header-title">Notifications</p>
+                                    <p class="msg-header-clear ms-auto">Marks all as read</p>
+                                </div>
+                            </a>
+                            <div class="header-notifications-list ps">
+                                <a class="dropdown-item" href="javascript:;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="notify bg-light-primary text-primary"><i class="bx bx-group"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="msg-name">New Customers<span class="msg-time float-end">14 Sec
+                                        ago</span></h6>
+                                            <p class="msg-info">5 new user registered</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="javascript:;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="notify bg-light-danger text-danger"><i class="bx bx-cart-alt"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="msg-name">New Orders <span class="msg-time float-end">2 min
+                                        ago</span></h6>
+                                            <p class="msg-info">You have recived new orders</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="javascript:;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="notify bg-light-success text-success"><i class="bx bx-file"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="msg-name">24 PDF File<span class="msg-time float-end">19 min
+                                        ago</span></h6>
+                                            <p class="msg-info">The pdf files generated</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="javascript:;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="notify bg-light-warning text-warning"><i class="bx bx-send"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="msg-name">Time Response <span class="msg-time float-end">28 min
+                                        ago</span></h6>
+                                            <p class="msg-info">5.1 min avarage time response</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="javascript:;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="notify bg-light-info text-info"><i class="bx bx-home-circle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="msg-name">New Product Approved <span class="msg-time float-end">2 hrs ago</span></h6>
+                                            <p class="msg-info">Your new product has approved</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="javascript:;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="notify bg-light-danger text-danger"><i class="bx bx-message-detail"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="msg-name">New Comments <span class="msg-time float-end">4 hrs
+                                        ago</span></h6>
+                                            <p class="msg-info">New customer comments recived</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="javascript:;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="notify bg-light-success text-success"><i class="bx bx-check-square"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="msg-name">Your item is shipped <span class="msg-time float-end">5 hrs
+                                        ago</span></h6>
+                                            <p class="msg-info">Successfully shipped your item</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="javascript:;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="notify bg-light-primary text-primary"><i class="bx bx-user-pin"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="msg-name">New 24 authors<span class="msg-time float-end">1 day
+                                        ago</span></h6>
+                                            <p class="msg-info">24 new authors joined last week</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="javascript:;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="notify bg-light-warning text-warning"><i class="bx bx-door-open"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="msg-name">Defense Alerts <span class="msg-time float-end">2 weeks
+                                        ago</span></h6>
+                                            <p class="msg-info">45% less alerts last 4 weeks</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+                            <a href="javascript:;">
+                                <div class="text-center msg-footer">View All Notifications</div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown dropdown-large">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">8</span>
+                            <i class="bx bx-comment"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="javascript:;">
+                                <div class="msg-header">
+                                    <p class="msg-header-title">Messages</p>
+                                    <p class="msg-header-clear ms-auto">Marks all as read</p>
+                                </div>
+                            </a>
+                            <div class="header-message-list ps">
+                                <a class="dropdown-item" href="javascript:;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-online">
+                                            <img src="assets/images/avatars/avatar-1.png" class="msg-avatar" alt="user avatar">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="msg-name">Daisy Anderson <span class="msg-time float-end">5 sec
+                                        ago</span></h6>
+                                            <p class="msg-info">The standard chunk of lorem</p>
+                                        </div>
+                                    </div>
+                                </a>
+                               
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="user-box dropdown">
+                <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
+                    <div class="user-info ps-3">
+                        <p class="user-name mb-0">Pauline Seitz</p>
+                        <p class="designattion mb-0">Web Designer</p>
                     </div>
-                    <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
-                </div>
-            </li>
-        </ul>
-        <ul class="navbar-nav navbar-nav-right">
-            <li class="nav-item dropdown">
-                <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-                    <i class="icon-bell mx-0"></i>
-                    <span class="count"></span>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                    <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
-                    <a class="dropdown-item preview-item">
-                        <div class="preview-thumbnail">
-                            <div class="preview-icon bg-success">
-                                <i class="ti-info-alt mx-0"></i>
-                            </div>
-                        </div>
-                        <div class="preview-item-content">
-                            <h6 class="preview-subject font-weight-normal">Application Error</h6>
-                            <p class="font-weight-light small-text mb-0 text-muted">
-                                Just now
-                            </p>
-                        </div>
-                    </a>
-                    <a class="dropdown-item preview-item">
-                        <div class="preview-thumbnail">
-                            <div class="preview-icon bg-warning">
-                                <i class="ti-settings mx-0"></i>
-                            </div>
-                        </div>
-                        <div class="preview-item-content">
-                            <h6 class="preview-subject font-weight-normal">Settings</h6>
-                            <p class="font-weight-light small-text mb-0 text-muted">
-                                Private message
-                            </p>
-                        </div>
-                    </a>
-                    <a class="dropdown-item preview-item">
-                        <div class="preview-thumbnail">
-                            <div class="preview-icon bg-info">
-                                <i class="ti-user mx-0"></i>
-                            </div>
-                        </div>
-                        <div class="preview-item-content">
-                            <h6 class="preview-subject font-weight-normal">New user registration</h6>
-                            <p class="font-weight-light small-text mb-0 text-muted">
-                                2 days ago
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </li>
-            <li class="nav-item nav-profile dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                    <img src="images/faces/face28.jpg" alt="profile" />
-                </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                    <a class="dropdown-item">
-                        <i class="ti-settings text-primary"></i>
-                        Settings
-                    </a>
-                    <a class="dropdown-item" href="/logout">
-                        <i class="ti-power-off text-primary"></i>
-                        Logout
-                    </a>
-                </div>
-            </li>
-            <li class="nav-item nav-settings d-none d-lg-flex">
-                <a class="nav-link" href="#">
-                    <i class="icon-ellipsis"></i>
-                </a>
-            </li>
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-            <span class="icon-menu"></span>
-        </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+                    </li>
+                    <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Settings</span></a>
+                    </li>
+                    <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-home-circle"></i><span>Dashboard</span></a>
+                    </li>
+                    <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-dollar-circle"></i><span>Earnings</span></a>
+                    </li>
+                    <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-download"></i><span>Downloads</span></a>
+                    </li>
+                    <li>
+                        <div class="dropdown-divider mb-0"></div>
+                    </li>
+                    <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-log-out-circle"></i><span>Logout</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
-</nav>
-<!--**********************************
-            Header end ti-comment-alt
-        ***********************************-->
+</header>

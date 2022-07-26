@@ -33,12 +33,8 @@ class RegisterRequest extends FormRequest
             'last_name'=>'required',
             'phone'=>'required',
             'province'=>'required',
-             'address'=>'required',
-             'status'=>'required',
-
-
-
-
+            'address'=>'required',
+            'status'=>'required',
         ];
     }
 }

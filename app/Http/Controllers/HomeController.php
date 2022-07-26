@@ -10,10 +10,10 @@ class HomeController extends Controller
     public function index()
     {
 
-        if (Auth::check()) {
+       /* if (Auth::check()) {
             return view('website.page.index');
-        }
-        return view('website.page.login');
+        } */
+        return view('website.page.index');
     }
      public function profile()
     {
@@ -23,10 +23,21 @@ class HomeController extends Controller
       //  return redirect('/');
         return view('website.page.login');
     }
+    public function login()
+    {
+        return view('website.page.login');
+    }
      public function signup()
     {
         $AccountType =DB::table('account_types')->get();
         return view('website.page.signup')->with('AccountType',$AccountType);
     }
-
+     public function forget()
+    {
+        return view('website.page.forget_password');
+    }
+    public function confirmed()
+    {
+        return view('website.page.confirm_password');
+    }
 }

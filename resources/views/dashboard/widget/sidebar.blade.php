@@ -1,110 +1,74 @@
- <!--**********************************
-            Sidebar start
-        ***********************************-->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">UI Elements</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-              <i class="icon-columns menu-icon"></i>
-              <span class="menu-title">Form elements</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="form-elements">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <i class="icon-bar-graph menu-icon"></i>
-              <span class="menu-title">Charts</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="charts">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-              <i class="icon-grid-2 menu-icon"></i>
-              <span class="menu-title">Tables</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="tables">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-              <i class="icon-contract menu-icon"></i>
-              <span class="menu-title">Icons</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="icons">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="icon-head menu-icon"></i>
-              <span class="menu-title">User Pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
-              <i class="icon-ban menu-icon"></i>
-              <span class="menu-title">Error pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="error">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
-              <i class="icon-paper menu-icon"></i>
-              <span class="menu-title">Documentation</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
- <!--**********************************
-            Sidebar end
-        ***********************************-->
+<div class="sidebar-wrapper" data-simplebar="true">
+  <div class="simplebar-wrapper" style="margin: 0px;">
+    <div class="simplebar-height-auto-observer-wrapper">
+      <div class="simplebar-height-auto-observer"></div>
+    </div><div class="simplebar-mask">
+      <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+        <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;">
+          <div class="simplebar-content mm-active" style="padding: 0px;">
+  <div class="sidebar-header">
+    <div>
+      <img src="/assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+    </div>
+    <div>
+      <h4 class="logo-text">Rocker</h4>
+    </div>
+    <div class="toggle-icon ms-auto"><i class="bx bx-arrow-to-left"></i>
+    </div>
+  </div>
+  <!--navigation-->
+  <ul class="metismenu mm-show" id="menu">
+    <li>
+      <a href="javascript:;" class="has-arrow">
+        <div class="parent-icon"><i class="bx bx-home-circle"></i>
+        </div>
+        <div class="menu-title">Dashboard</div>
+      </a>
+      <ul class="mm-collapse">
+        <li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Default</a>
+        </li>
+        <li> <a href="index2.html"><i class="bx bx-right-arrow-alt"></i>Alternate</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="javascript:;" class="has-arrow">
+        <div class="parent-icon"><i class="bx bx-category"></i>
+        </div>
+        <div class="menu-title">Administrator </div>
+      </a>
+      <ul class="mm-collapse">
+        <li> <a href="/dashboard/users/add"><i class="bx bx-right-arrow-alt"></i>Create Users</a>
+        </li>
+        <li> <a href="/dashboard/users"><i class="bx bx-right-arrow-alt"></i>Users</a>
+        </li>
+        <li> <a href="app-file-manager.html"><i class="bx bx-right-arrow-alt"></i>File Manager</a>
+        </li>
+        <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
+        </li>
+        <li> <a href="app-to-do.html"><i class="bx bx-right-arrow-alt"></i>Todo List</a>
+        </li>
+        <li> <a href="app-invoice.html"><i class="bx bx-right-arrow-alt"></i>Invoice</a>
+        </li>
+        <li> <a href="app-fullcalender.html"><i class="bx bx-right-arrow-alt"></i>Calendar</a>
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+  <!--end navigation-->
+</div>
+</div>
+</div>
+</div>
+<div class="simplebar-placeholder" style="width: auto; height: 1391px;">
+</div>
+</div>
+<div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+  <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+</div>
+<div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+  <div class="simplebar-scrollbar" style="height: 720px; transform: translate3d(0px, 0px, 0px); display: block;">
+  </div>
+</div>
+</div>

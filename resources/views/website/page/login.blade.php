@@ -27,6 +27,23 @@
   transform: translate(-50%, -50%);
 
 }
+.form-control {
+            width: 100%;
+            padding: 9px 20px;
+            text-align: left;
+
+            outline: 0;
+            border-radius: 4px;
+            background-color: #fff;
+            font-size: 15px;
+            font-weight: 300;
+            color: #8D8D8D;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            margin-top: 16px;
+            height: calc(1.5em + 1.2rem + 2px) !important;
+            font-family: 'Khmer OS Siemreap';
+        }
         </style>
 </head>
 
@@ -36,7 +53,7 @@
 
         <div class="page-body ">
             <div class="container-fluid">
-                <div class="container">
+                <div class="container" style="min-height: 120px;">
                     <h2 class="app_font_titel pt-4 text-white "> {{__('lang.efiling')}} </h2>
                 </div>
                 <div class="container row centered">
@@ -103,11 +120,14 @@
 
 
                                 <div class="col-12 text-center mt-4">
-                                    <button type="submit" class="btn btn-block btn-primary lift text-uppercase" title=""> {{__('lang.login')}} </button>
+                                    <button type="submit" class="btn btn-block btn-primary lift text-uppercase" title=""> {{__('lang.login')}}  <img class="img-fluid" src="/website/img/next-com.png" alt="Dark Mode"> </button>
                                 </div>
 
-                                <div class="col-12 text-center mt-3">
+                                <div class="col-6 text-center mt-3">
                                     <span class="text-muted"> <a href="/signup">{{__('lang.create new account')}}</a></span>
+                                </div>
+                                <div class="col-6 text-center mt-3">
+                                    <span class="text-muted"> <a href="/password/forget">{{__('lang.forget password')}}</a></span>
                                 </div>
                             </form>
 

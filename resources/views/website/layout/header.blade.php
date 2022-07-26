@@ -1,44 +1,25 @@
-<div class="body-header sticky-md-top">
-    <div class="container-fluid">
+<!-- <div class="body-header sticky-md-top"> -->
+    <div class="body-header bg-blue">  
+    <div class="container">
         <div class="d-flex justify-content-between">
 
             <a class="navbar-brand d-flex align-items-center color-900" href="/">
-                <svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect class="fill-secondary" x="1.5" y="4.5" width="27" height="27"
-                        rx="13.5"></rect>
-                    <rect class="fill-primary" x="13.5" y="1.5" width="33" height="33"
-                        rx="16.5" stroke="white" stroke-width="3"></rect>
-                </svg>
-                <span class="h4 mb-0 fw-bold ps-2">E-Filing </span>
+               <h3 class="app_font_titel">ក្រសួង និង ស្ថាប័ន</h3>
             </a>
 
             <div class="menu-link flex-fill">
 
                 <div class="dropdown menu-apps active">
                     <a class="btn btn-link active" href="/">
-                        <svg class="mx-1" xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor"
-                            viewBox="0 0 16 16">
-                            <path class="fill-secondary"
-                                d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z">
-                            </path>
-                            <path class="fill-muted" fill-rule="evenodd"
-                                d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z">
-                            </path>
-                        </svg>
-                        <span>Dashboard</span>
+
+                        <span>{{__('lang.home')}}</span>
                     </a>
                 </div>
 
                 <div class="dropdown menu-apps">
                     <a href="#" class="btn btn-link dropdown-toggle after-none" data-bs-toggle="dropdown">
-                        <svg class="mx-1" xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor"
-                            viewBox="0 0 16 16">
-                            <path class="fill-muted"
-                                d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z">
-                            </path>
-                            <path class="fill-secondary" d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
-                        </svg>
-                        <span>Apps</span>
+
+                        <span>{{__('lang.news')}}</span>
                     </a>
                     <div class="dropdown-menu mega-dropdown p-4 shadow-lg">
                         <div class="row g-3">
@@ -66,7 +47,7 @@
                                             </div>
                                         </a>
                                     </li>
-                                  
+
                                 </ul>
                             </div>
                             <div class="col-lg-5">
@@ -79,7 +60,7 @@
                                                     class="fa fa-angle-right me-3"></i>Project</a></li>
                                         <li><a href="./app-calendar-tui.html"><i
                                                     class="fa fa-angle-right me-3"></i>Calendar tui</a></li>
-                                        
+
                                     </ul>
                                 </div>
                             </div>
@@ -87,23 +68,12 @@
                     </div>
                 </div>
 
-             
+
 
                 <div class="dropdown menu-resources">
                     <a href="#" class="btn btn-link dropdown-toggle after-none" data-bs-toggle="dropdown">
-                        <svg class="mx-1" xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor"
-                            viewBox="0 0 16 16">
-                            <path class="fill-secondary"
-                                d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z">
-                            </path>
-                            <path class="fill-muted"
-                                d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z">
-                            </path>
-                            <path class="fill-muted"
-                                d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z">
-                            </path>
-                        </svg>
-                        <span>Resources</span>
+
+                        <span>{{__('lang.other')}}</span>
                     </a>
                     <div class="dropdown-menu mega-dropdown fullwidth shadow-lg bg-body rounded-0">
                         <div class="container-fluid">
@@ -122,16 +92,16 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                      
-                                      
+
+
                                     </div>
                                 </div>
                                 <div class="col-xl-5 col-lg-12 col-md-12">
                                     <div class="row g-2">
                                         <h5>Quick Links</h5>
-                                       
+
                                     </div>
-                                   
+
                                 </div>
 
                             </div>
@@ -141,12 +111,18 @@
             </div>
 
             <ul class="navbar-right d-flex align-items-center mb-0 list-unstyled">
+                @guest
                 <li>
+                    <a class="nav-link" href="/login"  title="Login">
+                       {{__('lang.login')}}
+                    </a>
                 </li>
-              
+                @endguest
+               
 
                 <li>
                     <div class="dropdown morphing scale-left user-profile mx-lg-3 mx-2">
+                        @auth
                         <a class="nav-link dropdown-toggle rounded-circle after-none p-0" href="#"
                             role="button" data-bs-toggle="dropdown">
                             <img class="avatar lg img-thumbnail rounded-circle shadow"
@@ -155,29 +131,25 @@
                         <div class="dropdown-menu border-0 rounded-4 shadow p-0">
                             <div class="card w240 overflow-hidden">
                                 <div class="card-body">
+                                 
                                     <h6 class="card-title mb-0">{{Auth::user()->username}}</h6>
                                     <p class="text-muted">{{Auth::user()->email}}</p>
                                     <a href="/logout"
                                         class="btn bg-secondary text-light text-uppercase w-100">Sign out</a>
+                                      
                                 </div>
                                 <div class="list-group m-2">
+                                    @auth
                                     <a class="list-group-item list-group-item-action border-0"
-                                        href="page-profile.html"><i class="w30 fa fa-user"></i>Profile &amp;
+                                        href="/profile"><i class="w30 fa fa-user"></i>Profile &amp;
                                         account</a>
                                     <a class="list-group-item list-group-item-action border-0"
                                         href="account-settings.html"><i class="w30 fa fa-gear"></i>Settings</a>
-                                    <a class="list-group-item list-group-item-action border-0"
-                                        href="page-support-ticket.html"><i class="w30 fa fa-tag"></i>Support
-                                        Ticket</a>
-                                    <a class="list-group-item list-group-item-action border-0"
-                                        href="page-teamsboard.html"><i class="w30 fa fa-users"></i>Manage team</a>
-                                    <a class="list-group-item list-group-item-action border-0" href="#"><i
-                                            class="w30 fa fa-calendar"></i>My Events</a>
-                                    <a class="list-group-item list-group-item-action border-0"
-                                        href="account-billing.html"><i class="w30 fa fa-credit-card"></i>Billing</a>
-                                </div>
+                                     @endauth
+                                    </div>
                             </div>
                         </div>
+                        @endauth
                     </div>
                 </li>
                 <li>
@@ -189,11 +161,11 @@
                     </svg>
                     </a>
                </li>
-              
+
             </ul>
         </div>
     </div>
-  
+
 </div>
 <div class="modal fade" id="SettingsModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-vertical right-side modal-dialog-scrollable">
@@ -202,7 +174,7 @@
                 <h5 class="modal-title">Theme Setting</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          
+
             <div class="px-xl-4 modal-body custom_scroll">
                 <div class="card fieldset border border-primary p-3 setting-theme mb-4">
                     <span class="fieldset-tile text-primary bg-card">Language</span>
@@ -215,10 +187,10 @@
                         </li>
                         @endif
                  @endforeach
-                     
+
                     </ul>
 
-                   
+
                 </div>
                 <div class="card fieldset border border-primary p-3 setting-theme mb-4">
                     <span class="fieldset-tile text-primary bg-card">Color Settings</span>
@@ -252,7 +224,7 @@
                         </li>
                     </ul>
 
-                   
+
                 </div>
 
                 <div class="card fieldset border setting-mode mb-4">
@@ -308,12 +280,12 @@
                         </label>
                     </div>
 
-                   
+
                 </div>
 
-               
+
             </div>
-           
+
         </div>
     </div>
 </div>

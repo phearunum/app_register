@@ -14,12 +14,21 @@
     <link rel="stylesheet" href="/website/css/dataTables.min.css">
     <link rel="stylesheet" href="/website/css/avio-style.css">
     <script src="/website/js/plugins.js"></script>  
-
+    <link href="{!! url('/css/app.css') !!}" rel="stylesheet">
+    <link href="{!! url('/css/km.css') !!}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Custom styles for this template
     <link href="{!! url('assets/css/app.css') !!}" rel="stylesheet">
     -->
+     <style>
+       body, button, input {
+    background-color: #eee;
+    font-family: khmer_normal;
+    font-size: 12px!important;
+   
+}
+     </style>
 </head>
 <body data-avio="theme-indigo">
     <div class="avio">
@@ -37,5 +46,8 @@
 
     <script src="/website/js/apexcharts.bundle.js"></script>
     <script src="/website/js/dataTables.bundle.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/js/bootstrap.js'></script>
   </body>
 </html>

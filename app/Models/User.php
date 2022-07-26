@@ -20,10 +20,16 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'username',
-        'password',
+            'email' ,
+            'username',
+            'password' ,
+            'account_type',
+            'first_name',
+            'last_name',
+            'phone',
+            'province',
+            'address',
+            'status',
     ];
 
     /**
@@ -43,6 +49,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'account_type' => 'boolean',
     ];
 
     public function setPasswordAttribute($value)
@@ -52,5 +59,11 @@ class User extends Authenticatable
     public function role()
     {
         return $this->belongsToMany(Role::class, 'role_user');
+    }
+
+
+    public function isAdmin()
+    {
+        return $this->account_type;
     }
 }
