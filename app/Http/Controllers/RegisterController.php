@@ -38,8 +38,8 @@ class RegisterController extends Controller
     {
 
         $user = User::create($request->validated());
-        auth()->login($user);
-        return redirect('/')->with('success', "Account successfully registered.");
+       // auth()->login($user);
+        return redirect('/signup')->with('success', "Account successfully registered.");
     }
     public function registers(Request $request)
     {

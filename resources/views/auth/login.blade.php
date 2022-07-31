@@ -16,7 +16,7 @@
     <img class="mb-4" src="{!! url('images/bootstrap-logo.svg') !!}" alt="" width="72" height="57">
     </center>
 
-    <h1 class="h3 mb-3 fw-normal app_font_titel">{{__('lang.login your account')}}</h1>
+    <h1 class="h3 mb-3 fw-normal app_font_titel">ss{{__('lang.login your account')}}</h1>
 
     @include('layouts.partials.messages')
 

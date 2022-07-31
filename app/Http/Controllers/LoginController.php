@@ -30,15 +30,19 @@ class LoginController extends Controller
 
         if(!Auth::validate($credentials)){
            // dd($credentials);
-            return redirect()->to('login')
-                ->withErrors(trans('auth.failed'));
+          //  return redirect()->to('login')
+           //     ->withErrors(trans('auth.failed'));
+           return response()->json(['status'=>302,
+           'data'=>[],
+           'smg'=>"username or password inconnect"]
+            );
         }
 
         $user = Auth::getProvider()->retrieveByCredentials($credentials);
-
-        Auth::login($user);
-
-        return $this->authenticated($request, $user);
+        $logged=Auth::login($user);
+       
+            return response()->json(['status'=>200,'data'=>$user,'smg'=>'success']);
+       // return $this->authenticated($request, $user);
     }
 
     /**
